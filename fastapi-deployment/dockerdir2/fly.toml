@@ -1,0 +1,4 @@
+# fly.toml file generated for art-expert-naik on 2023-04-14T19:54:57+03:00
+
+app = "art-expert-naik"
+primary_region = "lax"
