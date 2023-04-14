@@ -8,15 +8,15 @@ env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
 jobs:
-  deploy:
-    name: Deploy app
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-#      - run: flyctl launch --auto-confirm --path fastapi-deployment/dockerdir2  --region lax --now --name art-expert-naik
-      - run: cd fastapi-deployment/dockerdir2 && flyctl deploy --local-only && flyctl scale memory 2048
-      #- run: cd bot && flyctl deploy --local-only && flyctl scale memory 2048
+#  deploy:
+#    name: Deploy app
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: superfly/flyctl-actions/setup-flyctl@master
+##      - run: flyctl launch --auto-confirm --path fastapi-deployment/dockerdir2  --region lax --now --name art-expert-naik
+#      - run: cd fastapi-deployment/dockerdir2 && flyctl deploy --local-only && flyctl scale memory 2048
+#      #- run: cd bot && flyctl deploy --local-only && flyctl scale memory 2048
 
   deploy-bot:
     name: Deploy bot
