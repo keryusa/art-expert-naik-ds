@@ -14,6 +14,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-#       - run: flyctl launch --auto-confirm --access-token fo1_FhYq4HK3XDly-8E78v-PC4gEoLyH0RoQ0vtrXI80x5A --region lax --no-deploy --name art-expert-naik
-      - run: flyctl launch --auto-confirm --path fastapi-deployment/dockerdir2  --region lax --now --name art-expert-naik
-      - run: flyctl deploy --remote-only
+#       - run: flyctl launch --auto-confirm --path fastapi-deployment/dockerdir2  --region lax --now --name art-expert-naik
+      - run: cd fastapi-deployment/dockerdir2 && flyctl deploy --remote-only
