@@ -12,7 +12,7 @@ processes = []
 
 [[services]]
   http_checks = []
-  internal_port = 8080
+  internal_port = 8088
   processes = ["app"]
   protocol = "tcp"
   script_checks = []
@@ -34,4 +34,4 @@ processes = []
     grace_period = "1s"
     interval = "15s"
     restart_limit = 0
-    timeout = "2s"
+    timeout = "50s"
