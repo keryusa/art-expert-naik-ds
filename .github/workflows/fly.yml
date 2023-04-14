@@ -15,4 +15,4 @@ jobs:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
 #       - run: flyctl launch --auto-confirm --path fastapi-deployment/dockerdir2  --region lax --now --name art-expert-naik
-      - run: cd fastapi-deployment/dockerdir2 && flyctl deploy --local-only
+      - run: cd fastapi-deployment/dockerdir2 && flyctl deploy --local-only && flyctl scale memory 2048
