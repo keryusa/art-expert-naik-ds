@@ -1,6 +1,6 @@
 # fly.toml file generated for art-expert on 2023-01-14T21:03:20+06:00
 
-app = "art-expert-naik"
+app = "art-expert"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -12,7 +12,7 @@ processes = []
 
 [[services]]
   http_checks = []
-  internal_port = 8088
+  internal_port = 8080
   processes = ["app"]
   protocol = "tcp"
   script_checks = []
